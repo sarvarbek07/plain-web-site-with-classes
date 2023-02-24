@@ -1,0 +1,15 @@
+{% include   'base.html' %} 
+{% block content %}
+
+{% for i in list %}
+
+<h1>{{i.title}}</h1>
+<p>{{i.text|slice:200}}</p>
+<small>by: {{i.user}}</small>
+<br>
+<small>{{i.time}}</small>
+<br>
+<a href="{%url 'detail' i.pk%}">About</a>
+{% endfor %}
+
+{% endblock content %}

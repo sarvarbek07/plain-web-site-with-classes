@@ -1,0 +1,12 @@
+{% include   'base.html' %} 
+{% block content %}
+
+<h1>{{i.title}}</h1>
+<p>{{i.text|slice:200}}</p>
+<small>by: {{i.user}}</small>
+<br>
+<small>{{i.time}}</small>
+<br>
+<a href="{% url 'update' i.pk %}">tahrirlash</a>
+<a href="{% url 'delete' i.pk %}">o`chirish</a>
+{% endblock content %}
